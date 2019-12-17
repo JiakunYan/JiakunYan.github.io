@@ -81,12 +81,12 @@
                             <p align="center">
                                 <name>Jiakun Yan</name>
                             </p>
-                            <p>Hi, my name is Jiakun Yan. I am now a Senior student in Shanghai Jiao Tong University, China, majoring in Computer Science. I am also a member of Zhiyuan Honors Program of Engineering.</p>
-                            <p>I am currently a research internship at <a href="https://www.lbl.gov/">Lawrence Berkeley National Laboratory</a>, advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç</a> and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a>.</p>
+                            <p>Hi, my name is Jiakun Yan. I am currently a forth-year student at Shanghai Jiao Tong University, China, majoring in Computer Science. I am also a member of Zhiyuan Honors Program of Engineering, which is an elite program for top 5% talented students.</p>
+                            <p>I am currently a research assistant at <a href="https://www.lbl.gov/">Lawrence Berkeley National Laboratory</a>, advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç</a> and <a href="https://people.eecs.berkeley.edu/~yelick/">Katherine Yelick</a>.</p>
                             <p align="center">
-                            <a href="source/JiakunYanCV_110719.pdf">CV</a>
+                            <a href="source/JiakunYanCV.pdf">CV</a>
                             <!-- <a href="blog/index.html">Blogs</a> &nbsp;/&nbsp; -->
-                            <!-- <a href="https://github.com/">GitHub</a> &nbsp;/&nbsp; -->
+                            <a href="https://github.com/">GitHub</a> &nbsp;/&nbsp;
                             <!-- <a href="https://www.linkedin.com/">LinkedIn</a> -->
                             </p>
                         </td>
@@ -139,8 +139,30 @@
                     <tbody>
                         <tr>
                             <td>
-                                <p><strong>Lawrence Berkeley National Laboratory</strong>, USA, from Aug. 2019 to present<br>
-                                    Advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a></a></p>
+                                <p><a href="https://passion.lbl.gov/"><strong>PASSION Lab</strong></a>>, Lawrence Berkeley National Laboratory, USA, from Aug. 2019 to present<br>
+                                    <strong>Research Assistant</strong>, advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a></a></p>
+                                <ul>
+                                    <li>Asynchronous RPC Handler (ARH): a high-throughput RPC system with node-level aggregation and single-node work-stealing.</li>
+                                    <li>RDMA vs. RPC for Implementing Distributed Data Structures</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Advanced Network Laboratory</strong></a>>, Shanghai Jiao Tong University, China, from Oct. 2018 to Jan. 2019<br>
+                                    <strong>Research Assistant</strong>, advised by <a href="http://www.cs.sjtu.edu.cn/~linghe.kong/">Linghe Kong</p>
+                                <ul>
+                                    <li>High-speed parallel transmission system with Cellular and wifi hotspot.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p><strong>Artificial Intelligence Lab</strong></a>>, Shanghai Jiao Tong University, China, from Apr. 2018 to Oct. 2018<br>
+                                    <strong>Research Assistant</strong>, advised by Yi Xu</p>
+                                <ul>
+                                    <li>Video clip retrieval by natural language.</li>
+                                </ul>
                             </td>
                         </tr>
                     </tbody>
@@ -160,8 +182,8 @@
         </tr>
         <tr>
             <td>
-                <!-- Research -->
-                <heading>Research</heading>
+                <!-- Research Interest-->
+                <heading>Research Interest</heading>
                 <table class="subsection">
                     <tr>
                         <td>
@@ -172,7 +194,7 @@
                                 <li>Distributed System</li>
                                 <li>Programming Language</li>
                             </ul>
-                            <p>More broadly, I am interested in developing parallel algorithms and building practical system to make life easier and happier.</p>
+                            <p>Specifically, I am particularly interested in developing programming systems for parallel computing to improve the performance and programmability of parallel applications.</p>
                         </td>
                     </tr>
                 </table>
@@ -189,13 +211,13 @@
                         </td>
                         <td width="75%" valign="top">
                             <p><strong>Asynchronous RPC Handler (ARH)</strong><br>
-                                a thread-based RPC system with aggregation<br>
+                                a high-throughput RPC system with node-level aggregation and single-node work-stealing<br>
                                 advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç</a> and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a>, LBNL, Aug. 2019 - present<br>
-                                <!-- Yeah, it currently lives in a crowded space...This will improve...on some day -->
+                                <!-- Yeah, it is currently staying in a crowded repo...This will improve recently! -->
                             	<a href="https://github.com/berkeley-container-library/bcl/tree/arh/bcl/containers/experimental/arh">github</a></p>
-                            <p>Data-driven HPC applications suffer significant overheads for their fine-grained communication pattern. ARH is a thread-based RPC system which targets at data-driven applications. It uses Remote Procedure Call (RPC) to provide powerful expressive ability. It achieves high performance through node-level aggregation, work-stealing, and innovate concurrent data structures. It also provides a flexible programming interface for users.</p>
+                            <p>Data-driven HPC applications suffer significant overheads for their fine-grained communication pattern. ARH is a high-throughput RPC system that targets at this kind of data-driven applications. It uses Remote Procedure Call (RPC) to provide powerful expressiveness. It achieves high performance through node-level aggregation, work-stealing, and innovate concurrent data structures. It also provides a flexible programming interface for users to program.</p>
                             <p>Node-level aggregation is the primary idea underlying the ARH system, which aggregates RPC requests sharing the same source and target node and sends them together as one large message. Using this methodology, ARH is able to utilize high bandwidth across cores on the same node to achieve low overhead and high throughput.</p>
-                            <p>Work-stealing is another important feature of the ARH system. Every core could execute(steal) inbound RPC requests of other cores on the same target node. In this way, ARH could reduce attentiveness-sensitivity and load imbalance problem.
+                            <p>Work-stealing is another important feature of the ARH system. Every core could execute(steal) inbound RPC requests of other cores on the same target node. In this way, ARH could reduce attentiveness-sensitivity and load imbalance problems.
                             <p>I am the main developer of the ARH system. ARH is developed as a C++ header-only library based on GASNet_EX backend.</p>
                         </td>
                     </tr>
@@ -218,20 +240,22 @@
                         <td width="75%" valign="top">
                             <p><strong>Berkeley Container Library in Rust</strong><br>
                                 a memory-safe distributed data structure library in Rust<br>
-                                Graduate level course project of CS267, UC Berkeley, Mar. 2019 - May 2019 <br>
-                                advised by <a href="https://people.eecs.berkeley.edu/~brock/">Benjamin Brock</a></p>
-                            <p>The Berkeley Container Library(BCL) is a cross-platform C++ library of distributed data structures. Rust is an increasingly popular language as a competitor to C++ for its safety guarantees and streamlined syntax. In this project, we are developing a version of BCL in Rust language, and try to provide some safety guarantees to BCL with Rust.</p>
+                                Graduate-level course project of CS267, UC Berkeley, Mar. 2019 - May 2019 <br>
+                                advised by <a href="https://people.eecs.berkeley.edu/~brock/">Benjamin Brock</a>
+                                <a href="https://github.com/bhelfer/RustBCL">github</a></p>
+                            <p>The Berkeley Container Library (BCL) is a distributed data structure library based on RDMA written in C++. Rust is a system programming language for both safety and high performance. We re-designed and implemented BCL using Rust to provide several safety guarantees for the distributed data structures, including data race, memory leaking, type check, and explicit type convert.</p>
+                            <p>I was one of the main developers of BCL in Rust. I developed the global pointer based on OpenSHMEM backend, which is the base for high-level data structure and has little overhead compared to the raw backend functions, and the global guard, which prevents data race in reference to the mutex struct in Rust. I also contributed some codes to the distributed Array, GuardArray struct and their benchmarks.</p>
                         </td>
                     </tr>
                     <tr>
                         <td width="25%"><img class="auto" src="./source/highSpeedCellular.png"></td>
                         <td width="75%" valign="top">
                             <p><strong>High speed transmission system with Cellular and Wi-Fi hotspot</strong><br>
-                                a parallel transmission system in the Cellular network<br>
+                                a parallel transmission system in Cellular environment<br>
                                 advised by Prof. <a href="http://www.cs.sjtu.edu.cn/~linghe.kong/">Linghe Kong</a>, Oct. 2018 - Jan. 2019.</p>
-                            <p>Cellular network is relatively long-distance but low-speed, while Wi-Fi is relatively short-distance but high-speed. In this project, we design a high-speed parallel transmission system combining Cellular and Wi-Fi hotpot.</p>
-                            <p>In this system, a host phone opens its Wi-Fi hotpot and connects several relay phone. Then it delivers its data to relay phones by wifi-hotspot and they transmit data parallelly with Cellular network.</p>
-                            <p>In this project, I wrote a MIMD(Multiple Instruction Stream Multiple Data Stream) program in Java language to handle multiple network interfaces and implement the system on Android platform by myself.</p>
+                            <p>As the live video streaming grows rapidly, high-speed data transmission in the open field is increasingly demanding for high-quality video transmission. In this project, we proposed an innovate parallel data transmission system which combines Cellular network with wifi-hotspot to achieve high data transmission bandwidth.</p>
+                            <p>Link aggregation is the primary idea underlying this system: the host device uses a Wi-Fi hotspot to connect several relay device. Then it is able to utilize the high bandwidth of Wi-Fi hotpot and transmit data with the Cellular links of all the devices in this system.</p>
+                            <p>I developed the high-speed parallel transmission system as a real-world prototype system on the Android platform. I evaluated the system in real-world with 4 GigaBytes data transmission and gained 2.5X bandwidth with 4 devices.</p>
                         </td>
                     </tr>
                     <tr>
@@ -239,22 +263,19 @@
                         <td width="75%" valign="top">
                             <p><strong>PPT Ctrl: an interactive PPT control APP</strong><br>
                                 advised by Prof. <a href="http://www.cs.sjtu.edu.cn/~linghe.kong/">Linghe Kong</a>, Sep. 2018 - Dec. 2018.</p>
-                            <p>PPT Ctrl is a project controling PPT by a smart phone APP in an interactive way. It combines the functions of tradtional Powerpoint clickers with the advantages of smart phones, and thus becomes a easy-to-use and powerful PPT control device.</p>
-                            <p>PPT Ctrl enables page switching, highlighting, magnifying, and drawing while real-time presentation screen displays on smart phone simultaneously.</p>
-                            <p>I implemented this system from scratch in a team of four students as the team leader. The system is based on Qt and Android platform.</p>
-                            <p>We have submitted our project to Shanghai University Student Computer Application Ability Competition, 2019.</p>
+                            <p>PPT is a powerful media to convey ideas and share information in a broad array of scenarios. However, current PPT remote control tools are far from perfect. PPT Ctrl is a mobile application enabling people to control PPT in an interactive way. It has various functions including page switching, highlighting, magnifying, drawing, and real-time computer screen display.</p>
+                            <p>I developed this system from scratch in a team of four students as the team leader. The system is based on Qt and Android platform.</p>
+                            <p>This project won the first prize at the Chinese University Student Computer Application Ability Competition, 2019.</p>
                         </td>
                     </tr>
                     <tr>
                         <td width="25%"><img class="auto" src="./source/videoRetrieval.png"></td>
                         <td width="75%" valign="top">
-                            <p><strong>Video clip retrieval by nature language</strong>
+                            <p><strong>Video clip retrieval by natural language</strong>
                                 <br>
                                 advised by Prof. <a href="http://icne.sjtu.edu.cn/info/1061/1075.htm">Yi Xu</a>, Apr. 2018 - Oct. 2018 <br></p>
-                            <p>The task is that, given a video and a query sentence, find the clip in the video described by the sentence.</p>
-                            <p>We propose a spatio-textual coattention network to establish the interactions between words and spatial regions.</p>
-                            <p>We evaluated on DiDeMo dataset, and outperforms state-of-the-art methods by a significant margin on both Rank@1 and Rank@5.</p>
-                            <p>Our work has been submitted to ICCV 2019. I am the second author.</p>
+                            <p>Visual video and natural language understanding are two of the main efforts enabling computers to "think like humans". Video clip retrieval by natural language is an interdisciplinary task of these two fields. Its goal is: given a video and a query sentence, find the clip in the video described by the sentence.</p>
+                            <p>In this project, we proposed a spatial-textual coattention network to establish the interactions between words and spatial regions. We evaluated our model on the DiDeMo dataset and outperformed state-of-the-art methods by a significant margin.</p>
                         </td>
                     </tr>
                 </table>
@@ -309,7 +330,7 @@
                 <table class="subsection">
                     <tr>
                         <td>
-                        I am a person adoring rationality and happiness. Amazed by the beauty in logic and infinite possibility, I chose computer science as my major. Deciding to devote my life to an area I really love, I have explored different areas of computer science, namely, artificial intelligence, computer network, and parallel computing in chronological order. In the process of my exploration, I found my interest gradually converging to computer system and very likely parallel computing and distributed system.
+                        I currently believe in rationality and emotional neutrality. I said "currently" because I also believe in lifelong development. Amazed by the beauty in logic and infinite possibility, I chose computer science as my major. Deciding to devote my life to an area I love, I have explored different areas of computer science, namely, artificial intelligence, computer networks, programming languages, and parallel computing in chronological order. In the process of my exploration, I found my interest gradually converging to computer systems and very likely programming languages and parallel computing. I am now applying for CS Ph.D. programs starting in Fall 2020.
                         </td>
                     </tr>
                 </table>
