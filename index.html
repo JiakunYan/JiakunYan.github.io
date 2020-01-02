@@ -142,7 +142,7 @@
                                 <p><a href="https://passion.lbl.gov/"><strong>PASSION Lab</strong></a>, Lawrence Berkeley National Laboratory, USA, from Aug. 2019 to present<br>
                                     Research Assistant, advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç</a> and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a></a></p>
                                 <!-- <ul> -->
-                                    <!-- <li>Asynchronous RPC Handler (ARH): a high-throughput RPC system with node-level aggregation and single-node work-stealing.</li> -->
+                                    <!-- <li>Asynchronous RPC Library (ARL): a high-throughput RPC system with node-level aggregation and single-node work-stealing.</li> -->
                                     <!-- <li>RDMA vs. RPC for Implementing Distributed Data Structures</li> -->
                                 <!-- </ul> -->
                             </td>
@@ -210,15 +210,14 @@
                             <!-- <img class="auto" src="./source/I don't know....png"> -->
                         </td>
                         <td width="75%" valign="top">
-                            <p><strong>Asynchronous RPC Handler (ARH)</strong><br>
+                            <p><strong>Asynchronous RPC Library (ARL)</strong><br>
                                 a high-throughput RPC system with node-level aggregation and single-node work-stealing<br>
                                 advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç</a> and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a>, LBNL, Aug. 2019 - present<br>
-                                <!-- Yeah, it is currently staying in a crowded repo...This will improve recently! -->
-                            	<a href="https://github.com/berkeley-container-library/bcl/tree/arh/bcl/containers/experimental/arh">github</a></p>
-                            <p>Data-driven HPC applications suffer significant overheads for their fine-grained communication pattern. ARH is a high-throughput RPC system that targets at this kind of data-driven applications. It uses Remote Procedure Call (RPC) to provide powerful expressiveness. It achieves high performance through node-level aggregation, work-stealing, and innovate concurrent data structures. It also provides a flexible programming interface for users to program.</p>
-                            <p>Node-level aggregation is the primary idea underlying the ARH system, which aggregates RPC requests sharing the same source and target node and sends them together as one large message. Using this methodology, ARH is able to utilize high bandwidth across cores on the same node to achieve low overhead and high throughput.</p>
-                            <p>Work-stealing is another important feature of the ARH system. Every core could execute(steal) inbound RPC requests of other cores on the same target node. In this way, ARH could reduce attentiveness-sensitivity and load imbalance problems.
-                            <p>I am the main developer of the ARH system. ARH is developed as a C++ header-only library based on GASNet_EX backend.</p>
+                            	<a href="https://github.com/JiakunYan/arl">github</a></p>
+                            <p>Data-driven HPC applications suffer significant overheads for their fine-grained communication pattern. ARL is a high-throughput RPC system that targets at this kind of data-driven applications. It uses Remote Procedure Call (RPC) to provide powerful expressiveness. It achieves high performance through node-level aggregation, work-stealing, and innovate concurrent data structures. It also provides a flexible programming interface for users to program.</p>
+                            <p>Node-level aggregation is the primary idea underlying the ARL system, which aggregates RPC requests sharing the same source and target node and sends them together as one large message. Using this methodology, ARL is able to utilize high bandwidth across cores on the same node to achieve low overhead and high throughput.</p>
+                            <p>Work-stealing is another important feature of the ARL system. Every core could execute(steal) inbound RPC requests of other cores on the same target node. In this way, ARL could reduce attentiveness-sensitivity and load imbalance problems.
+                            <p>I am the main developer of the ARL system. ARL is developed as a C++ header-only library based on GASNet_EX backend.</p>
                         </td>
                     </tr>
                     <tr>
@@ -229,7 +228,7 @@
                             <p><strong>RDMA vs. RPC for Implementing Distributed Data Structures</strong><br>
                                 advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç</a> and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a>, LBNL, Aug. 2019 - Sep. 2019<br></p>
                             <p>RDMA and RPC are two primary ways for implementing distributed data structures. In this project, we compared the implementation of distributed data structures using RDMA and RPC. We developed an analytical model to predict the performance of RDMA- and RPC- based data structures based on their constituent operations, and then compared it with real-world performance.</p>
-                            <p>My primary focus in this project is to design and conduct experiments to investigate the attentiveness problem of RPC, which became one of the motivations for the later ARH system project.</p>
+                            <p>My primary focus in this project is to design and conduct experiments to investigate the attentiveness problem of RPC, which became one of the motivations for the later ARL system project.</p>
                             <p>This project is accepted by IA<sup>3</sup> workshop, Supercomputing 2019.</p>
                         </td>
                     </tr>
