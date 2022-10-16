@@ -226,7 +226,7 @@
                             <p><strong>The Lightweight Communication Interface (LCI)</strong><br>
                                 a cool communication runtime for parallel libraries and frameworks<br>
                                 advised by <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Aug. 2020 - present</p>
-                            <p>The Lightweight Communication Interface (LCI) is designed to be a communication runtime used by libraries and frameworks. It aims to avoid many of the shortcomings of the Message Passing Interface (MPI) exposed by modern parallel architectures and applications, such as the multi-threaded performance, smart NIC utilization, and signaling mechanisms.</p>
+                            <p>TThe Lightweight Communication Interface (LCI) is a low-level communication runtime. It aims to provide efficient support for applications with asynchronous, multithreaded, irregular communication patterns. It is designed with task-based runtimes as the target clients but should be general enough to apply to other irregular applications such as graph analysis/sparse linear algebra. Its major features include (a) flexible communication primitives and signaling mechanisms (b) better multithread performance (c) explicit user control of communication behaviors and resources.</p>
                             <p>I am one of the major developers of LCI. I developed the Libfabric backend of LCI to enable LCI to run on the Cray/GNI platforms. I am evaluating the multithreaded performance of LCI and exploring ways, such as utilizing multiple hardware contexts, to improve its multi-threaded performance.</p>
                         </td>
                     </tr>
