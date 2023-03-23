@@ -212,10 +212,16 @@
                         </td>
                         <td width="100%" valign="top">
                             <p><strong>HPX + LCI</strong><br>
-                                integrating LCI into a task-based programming runtime<br>
-                                advised by <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Aug. 2021 - present</p>
-                            <p>The High Performance ParalleX (HPX) is a runtime system known for its support for the asynchronous task programming model. Currently, HPX uses MPI as its major communication backend. In this project, we would like to add an LCI parcelport for HPX and compare the new HPX/LCI system with the original HPX/MPI system to investigate: (a) how efficiently the current LCI can interact with HPX. (b) where LCI can further improve to better support the communication requirement of asynchronous task frameworks.</p>
-                            <p>To date, an initial implementation of the LCI parcelport is completed. It has been shipped with HPX 1.8.0. We are working on the performance evaluation.</p>
+                                Integrating LCI into a task-based programming runtime<br>
+                                Advised by <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Aug. 2021 - present<br>
+                                <a href="https://wamta23.stellar-group.org/">WAMTA23</a> Poster (<a href="https://zenodo.org/record/7651717#.ZByCdNLMLn0">Zenodo</a>, <a href="source/WAMTA23_LCI_Poster.pdf">pdf</a>)
+                            </p>
+                            <p>The <a href="https://github.com/STEllAR-GROUP/hpx/">High Performance ParalleX (HPX)</a> is a runtime system known for its support for the asynchronous task programming model. Currently, HPX uses MPI as its major communication backend. In this project, we would like to add an LCI parcelport for HPX and compare the new HPX/LCI system with the original HPX/MPI system to investigate: (a) how efficiently the current LCI can interact with HPX. (b) where LCI can further improve to better support the communication requirement of asynchronous task frameworks.</p>
+                            <p>The first version of a full-fledged LCI parcelport implementation has been merged to the HPX master branch
+                               and will be shipped with HPX release 1.9.0. We evaluated the performance using a real-world application,
+                               Octo-Tiger : a star system simulator based on the fast multipole method on adaptive Octrees. The LCI parcelport
+                               achieved 40% performance speedup compared to the MPI parcelport on 32 nodes/4096 cores.
+                            </p>
                         </td>
                     </tr>
                     <tr>
@@ -224,9 +230,11 @@
                         </td>
                         <td width="100%" valign="top">
                             <p><strong>The Lightweight Communication Interface (LCI)</strong><br>
-                                a cool communication runtime for parallel libraries and frameworks<br>
-                                advised by <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Aug. 2020 - present</p>
-                            <p>TThe Lightweight Communication Interface (LCI) is a low-level communication runtime. It aims to provide efficient support for applications with asynchronous, multithreaded, irregular communication patterns. It is designed with task-based runtimes as the target clients but should be general enough to apply to other irregular applications such as graph analysis/sparse linear algebra. Its major features include (a) flexible communication primitives and signaling mechanisms (b) better multithread performance (c) explicit user control of communication behaviors and resources.</p>
+                                A cool communication runtime for parallel libraries and frameworks<br>
+                                Advised by <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Aug. 2020 - present<br>
+                                <a href="https://github.com/uiuc-hpc/LC/">GitHub</a>
+                            </p>
+                            <p>The Lightweight Communication Interface (LCI) is a low-level communication runtime. It aims to provide efficient support for applications with asynchronous, multithreaded, irregular communication patterns. It is designed with task-based runtimes as the target clients but should be general enough to apply to other irregular applications such as graph analysis/sparse linear algebra. Its major features include (a) flexible communication primitives and signaling mechanisms (b) better multithread performance (c) explicit user control of communication behaviors and resources.</p>
                             <p>I am one of the major developers of LCI. I developed the Libfabric backend of LCI to enable LCI to run on the Cray/GNI platforms. I am evaluating the multithreaded performance of LCI and exploring ways, such as utilizing multiple hardware contexts, to improve its multi-threaded performance.</p>
                         </td>
                     </tr>
@@ -236,8 +244,8 @@
                         </td>
                         <td width="100%" valign="top">
                             <p><strong>TaskFlow</strong><br>
-                                a task-based runtime on distributed-memory system<br>
-                                advised by <a href="http://iacoma.cs.uiuc.edu/josep/torrellas.html">Josep Torrellas</a> and <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Jan. 2021 - May. 2021</p>
+                                A task-based runtime on distributed-memory system<br>
+                                Advised by <a href="http://iacoma.cs.uiuc.edu/josep/torrellas.html">Josep Torrellas</a> and <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Jan. 2021 - May. 2021</p>
                             <p>TaskFlow is a simple but efficient task-based runtime for distributed-memory systems. It adopts the PTG-based task programming model that enables reduced time/memory overhead and fine-grained synchronization. It executes tasks according to an explicit task dependency graph and uses active messages to proactively signal remote tasks.</p>
                             <p>We implement TaskFlow based on Argobots and MPI. We perform a collection of micro-benchmarks and mini-applications to evaluate the performance of its various configurations and compare it with two established PTG-based task systems, TaskTorrent and PaRSEC. The benchmark results show that TaskFlow generally achieves the best performance under various circumstances.</p>
                         </td>
@@ -248,9 +256,9 @@
                         </td>
                         <td width="100%" valign="top">
                             <p><strong>Asynchronous RPC Library (ARL)</strong><br>
-                                a high-throughput RPC system with node-level aggregation and single-node work-stealing<br>
-                                advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç</a> and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a>, LBNL, Aug. 2019 - Jul. 2020<br>
-                                <a href="https://github.com/JiakunYan/arl">github</a></p>
+                                A high-throughput RPC system with node-level aggregation and single-node work-stealing<br>
+                                Advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç</a> and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a>, LBNL, Aug. 2019 - Jul. 2020<br>
+                                <a href="https://github.com/JiakunYan/arl">GitHub</a></p>
                             <p>Data-driven HPC applications suffer significant overheads for their fine-grained communication pattern. ARL is a high-throughput RPC system that targets at this kind of data-driven applications. It uses Remote Procedure Call (RPC) to provide powerful expressiveness. It achieves high performance through node-level aggregation, work-stealing, and innovate concurrent data structures. It also provides a flexible programming interface for users to program.</p>
                             <p>Node-level aggregation is the primary idea underlying the ARL system, which aggregates RPC requests sharing the same source and target node and sends them together as one large message. Using this methodology, ARL is able to utilize high bandwidth across cores on the same node to achieve low overhead and high throughput.</p>
                             <p>Work-stealing is another important feature of the ARL system. Every core could execute(steal) inbound RPC requests of other cores on the same target node. In this way, ARL could reduce attentiveness-sensitivity and load imbalance problems.
@@ -263,7 +271,7 @@
                         </td>
                         <td width="100%" valign="top">
                             <p><strong>RDMA vs. RPC for Implementing Distributed Data Structures</strong><br>
-                                advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç</a> and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a>, LBNL, Aug. 2019 - Sep. 2019<br></p>
+                                Advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç</a> and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a>, LBNL, Aug. 2019 - Sep. 2019<br></p>
                             <p>RDMA and RPC are two primary ways for implementing distributed data structures. In this project, we compared the implementation of distributed data structures using RDMA and RPC. We developed an analytical model to predict the performance of RDMA- and RPC- based data structures based on their constituent operations, and then compared it with real-world performance.</p>
                             <p>My primary focus in this project is to design and conduct experiments to investigate the attentiveness problem of RPC, which became one of the motivations for the later ARL system project.</p>
                             <p>This project is accepted by IA<sup>3</sup> workshop, Supercomputing 2019.</p>
@@ -275,10 +283,10 @@
                         </td>
                         <td width="100%" valign="top">
                             <p><strong>Berkeley Container Library in Rust</strong><br>
-                                a memory-safe distributed data structure library in Rust<br>
-                                Graduate-level course project of CS267, UC Berkeley, Mar. 2019 - May 2019 <br>
-                                advised by <a href="https://people.eecs.berkeley.edu/~brock/">Benjamin Brock</a> <br>
-                                <a href="https://github.com/bhelfer/RustBCL">github</a></p>
+                                A memory-safe distributed data structure library in Rust<br>
+                                CS267 course project, UC Berkeley, Mar. 2019 - May 2019 <br>
+                                Advised by <a href="https://people.eecs.berkeley.edu/~brock/">Benjamin Brock</a> <br>
+                                <a href="https://github.com/bhelfer/RustBCL">GitHub</a></p>
                             <p>The Berkeley Container Library (BCL) is a distributed data structure library based on RDMA written in C++. Rust is a system programming language for both safety and high performance. We re-designed and implemented BCL using Rust to provide several safety guarantees for the distributed data structures, including data race, memory leaking, type check, and explicit type convert.</p>
                             <p>I was one of the main developers of BCL in Rust. I developed the global pointer based on OpenSHMEM backend, which is the base for high-level data structure and has little overhead compared to the raw backend functions, and the global guard, which prevents data race in reference to the mutex struct in Rust. I also contributed some codes to the distributed Array, GuardArray struct and their benchmarks.</p>
                         </td>
