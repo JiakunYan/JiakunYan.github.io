@@ -81,7 +81,7 @@
                             <p align="center">
                                 <name>Jiakun Yan</name>
                             </p>
-                            <p>Hi, my name is Jiakun Yan. I am a third-year Ph.D. student at
+                            <p>Hi, my name is Jiakun Yan. I am a fourth-year Ph.D. student at
                                 University of Illinois at Urbana-Champaign, advised by
                                 <a href="https://snir.cs.illinois.edu/">Marc Snir</a>.</p>
                             <p>I am working on a cool communication runtime, the Lightweight Communication Interface,
@@ -168,22 +168,20 @@
                     <tbody>
                         <tr>
                             <td>
+                                <p>Programming Models and Runtime Systems (PMRS) group, Argonne National Laboratory, USA, from May. 2023 to Aug. 2023<br>
+                                    Research Assistant, advised by <a href="https://www.mcs.anl.gov/~yguo/">Yanfei Guo</a></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <p>Programming Systems and Applications Research Group, NVIDIA Research, USA, from May. 2022 to Aug. 2022<br>
-                                    Research Assistant, advised by <a href="https://lightsighter.org/">Michael Bauer</a> and <a href="https://mgarland.org/">Michael Garland</a></a></p>
-                                <!-- <ul> -->
-                                <!-- <li>Asynchronous RPC Library (ARL): a high-throughput RPC system with node-level aggregation and single-node work-stealing.</li> -->
-                                <!-- <li>RDMA vs. RPC for Implementing Distributed Data Structures</li> -->
-                                <!-- </ul> -->
+                                    Research Assistant, advised by <a href="https://lightsighter.org/">Michael Bauer</a> and <a href="https://mgarland.org/">Michael Garland</a></p>
                             </td>
                         </tr>
                         <tr>
                             <td>
                                 <p><a href="https://passion.lbl.gov/"><strong>PASSION Lab</strong></a>, Lawrence Berkeley National Laboratory, USA, from Aug. 2019 to Jan. 2020<br>
                                     Research Assistant, advised by <a href="https://people.eecs.berkeley.edu/~aydin/">Aydın Buluç</a> and <a href="https://people.eecs.berkeley.edu/~yelick/">Kathy Yelick</a></a></p>
-                                <!-- <ul> -->
-                                <!-- <li>Asynchronous RPC Library (ARL): a high-throughput RPC system with node-level aggregation and single-node work-stealing.</li> -->
-                                <!-- <li>RDMA vs. RPC for Implementing Distributed Data Structures</li> -->
-                                <!-- </ul> -->
                             </td>
                         </tr>
                     </tbody>
@@ -194,9 +192,21 @@
             <td>
                 <!-- Publication -->
                 <heading>Publication</heading>
-                <table class="oneLineSubsection">
+                <table class="subsection">
                     <tr>
-                        <td>Benjamin Brock, Yuxin Chen, <strong>Jiakun Yan</strong>, John Owens, Aydın Buluç, and Katherine Yelick. "RDMA vs. RPC for Implementing Distributed Data Structures" to appear in Workshop on Irregular Applications: Architectures and Algorithms (IA<sup>3</sup>), 2019. [ <a href="source/jiakun-pub_bib.html#rdmavsrpc19">bib</a> | <a href="https://arxiv.org/abs/1910.02158">preprint</a> ]</td>
+                        <td><strong>Jiakun Yan</strong>, Hartmut Kaiser, and Marc Snir. "Design and Analysis of
+                            the Network Software Stack of an Asynchronous Many-task System – The
+                            LCI parcelport of HPX" In Workshops of The International Conference on
+                            High Performance Computing, Network, Storage, and Analysis (SC-W 2023).
+                            [<a href="source/jiakun-pub_bib.html#hpxlci_pawatm23">bib</a> |
+                            <a href="source/paw-atm23_hpx_lci.pdf">pdf</a> ]</td>
+                    </tr>
+                    <tr>
+                        <td>Benjamin Brock, Yuxin Chen, <strong>Jiakun Yan</strong>, John Owens, Aydın Buluç,
+                            and Katherine Yelick. "RDMA vs. RPC for Implementing Distributed Data Structures"
+                            In Workshop on Irregular Applications: Architectures and Algorithms (IA<sup>3</sup>), 2019.
+                            [ <a href="source/jiakun-pub_bib.html#rdmavsrpc19">bib</a> |
+                            <a href="https://arxiv.org/abs/1910.02158">pdf</a> ]</td>
                     </tr>
                 </table>
             </td>
@@ -214,7 +224,12 @@
                             <p><strong>HPX + LCI</strong><br>
                                 Integrating LCI into a task-based programming runtime<br>
                                 Advised by <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Aug. 2021 - present<br>
-                                <a href="https://wamta23.stellar-group.org/">WAMTA23</a> Poster (<a href="https://zenodo.org/record/7651717#.ZByCdNLMLn0">Zenodo</a>, <a href="source/WAMTA23_LCI_Poster.pdf">pdf</a>)
+                                <a href="https://wamta23.stellar-group.org/">WAMTA23</a> Poster
+                                [<a href="https://zenodo.org/record/7651717#.ZByCdNLMLn0">Zenodo</a> |
+                                <a href="source/WAMTA23_LCI_Poster.pdf">pdf</a>]<br>
+                                <a href="https://sourceryinstitute.github.io/PAW/">PAW-ATM23</a> Workshop Paper
+                                [<a href="source/jiakun-pub_bib.html#hpxlci_pawatm23">bib</a> |
+                                 <a href="source/paw-atm23_hpx_lci.pdf">pdf</a> ]<br>
                             </p>
                             <p>The <a href="https://github.com/STEllAR-GROUP/hpx/">High Performance ParalleX (HPX)</a> is a runtime system known for its support for the asynchronous task programming model. Currently, HPX uses MPI as its major communication backend. In this project, we would like to add an LCI parcelport for HPX and compare the new HPX/LCI system with the original HPX/MPI system to investigate: (a) how efficiently the current LCI can interact with HPX. (b) where LCI can further improve to better support the communication requirement of asynchronous task frameworks.</p>
                             <p>The first version of a full-fledged LCI parcelport implementation has been merged to the HPX master branch
