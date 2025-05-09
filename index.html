@@ -84,9 +84,13 @@
                             <p>Hi, my name is Jiakun Yan. I am a fifth-year Ph.D. student at
                                 University of Illinois at Urbana-Champaign, advised by
                                 <a href="https://snir.cs.illinois.edu/">Marc Snir</a>.</p>
-                            <p>I am working on a cool communication runtime, the Lightweight Communication Interface,
-                                to better utilize modern parallel architectures and serve modern high-level programming
-                                models.</p>
+                            <p>Currently, I am focusing on designing better communication libraries 
+                                for highly dynamic/irregular programming systems and applications. 
+                                I am the main developer of <a href="https://uiuc-hpc.github.io/lci/">LCI</a> 
+                                and also working/worked on <a href="https://www.mpich.org/">MPICH</a>, 
+                                <a href="https://hpx.stellar-group.org/">HPX</a>, 
+                                <a href="https://legion.stanford.edu/">Legion</a>, and 
+                                <a href="https://charmplusplus.org/">Charm++</a>.</p>
                             <p align="center">
                                 <a href="source/JiakunYanCV.pdf">CV</a> &nbsp;/&nbsp;
                                 <!-- <a href="blog/index.html">Blogs</a> &nbsp;/&nbsp; -->
@@ -286,22 +290,13 @@
                             <!-- <img class="auto" src="./source/I don't know....png"> -->
                         </td>
                         <td width="100%" valign="top">
-                            <p><strong>HPX + LCI</strong><br>
-                                Integrating LCI into a task-based programming runtime<br>
-                                Advised by <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Aug. 2021 - present<br>
-                                <a href="https://wamta23.stellar-group.org/">WAMTA23</a> Poster
-                                [<a href="https://zenodo.org/record/7651717#.ZByCdNLMLn0">Zenodo</a> |
-                                <a href="source/WAMTA23_LCI_Poster.pdf">pdf</a>]<br>
-                                <a href="https://sourceryinstitute.github.io/PAW/">PAW-ATM23</a> Workshop Paper
-                                [<a href="source/jiakun-pub_bib.html#hpxlci_pawatm23">bib</a> |
-                                 <a href="source/paw-atm23_hpx_lci.pdf">pdf</a> ]<br>
+                            <p><strong>The Lightweight Communication Interface (LCI)</strong><br>
+                                A cool communication runtime for parallel libraries and frameworks<br>
+                                Advised by <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Aug. 2020 - present<br>
+                                <a href="https://uiuc-hpc.github.io/lci/">LCI Homepage</a>
                             </p>
-                            <p>The <a href="https://github.com/STEllAR-GROUP/hpx/">High Performance ParalleX (HPX)</a> is a runtime system known for its support for the asynchronous task programming model. Currently, HPX uses MPI as its major communication backend. In this project, we would like to add an LCI parcelport for HPX and compare the new HPX/LCI system with the original HPX/MPI system to investigate: (a) how efficiently the current LCI can interact with HPX. (b) where LCI can further improve to better support the communication requirement of asynchronous task frameworks.</p>
-                            <p>The first version of a full-fledged LCI parcelport implementation has been merged to the HPX master branch
-                               and will be shipped with HPX release 1.9.0. We evaluated the performance using a real-world application,
-                               Octo-Tiger : a star system simulator based on the fast multipole method on adaptive Octrees. The LCI parcelport
-                               achieved 40% performance speedup compared to the MPI parcelport on 32 nodes/4096 cores.
-                            </p>
+                            <p>The Lightweight Communication Interface (LCI) is a low-level communication runtime. It aims to provide efficient support for applications with asynchronous, multithreaded, irregular communication patterns. It is designed with task-based runtimes as the target clients but should be general enough to apply to other irregular applications such as graph analysis/sparse linear algebra. Its major features include (a) flexible communication primitives and signaling mechanisms (b) better multithread performance (c) explicit user control of communication behaviors and resources.</p>
+                            <p>I am one of the major developers of LCI. I developed the Libfabric backend of LCI to enable LCI to run on the Cray/GNI platforms. I am evaluating the multithreaded performance of LCI and exploring ways, such as utilizing multiple hardware contexts, to improve its multi-threaded performance.</p>
                         </td>
                     </tr>
                     <tr>
@@ -309,16 +304,17 @@
                             <!-- <img class="auto" src="./source/I don't know....png"> -->
                         </td>
                         <td width="100%" valign="top">
-                            <p><strong>The Lightweight Communication Interface (LCI)</strong><br>
-                                A cool communication runtime for parallel libraries and frameworks<br>
-                                Advised by <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Aug. 2020 - present<br>
-                                <a href="https://github.com/uiuc-hpc/lci/">GitHub</a><br>
-                                <a href="https://wamta24.github.io/">WAMTA24</a> Poster
-                                [<a href="https://https://zenodo.org/records/10681468">Zenodo</a> |
-                                <a href="source/WAMTA24_LCI_Poster.pdf">pdf</a>]<br>
+                            <p><strong>HPX + LCI</strong><br>
+                                Integrating LCI into a task-based programming runtime<br>
+                                Advised by <a href="https://snir.cs.illinois.edu/">Marc Snir</a>, UIUC, Aug. 2021 - present<br>
+                                <a href="https://hpx-docs.stellar-group.org/latest/html/manual/using_the_lci_parcelport.html">HPX Manual -- using the LCI parcelport</a>
                             </p>
-                            <p>The Lightweight Communication Interface (LCI) is a low-level communication runtime. It aims to provide efficient support for applications with asynchronous, multithreaded, irregular communication patterns. It is designed with task-based runtimes as the target clients but should be general enough to apply to other irregular applications such as graph analysis/sparse linear algebra. Its major features include (a) flexible communication primitives and signaling mechanisms (b) better multithread performance (c) explicit user control of communication behaviors and resources.</p>
-                            <p>I am one of the major developers of LCI. I developed the Libfabric backend of LCI to enable LCI to run on the Cray/GNI platforms. I am evaluating the multithreaded performance of LCI and exploring ways, such as utilizing multiple hardware contexts, to improve its multi-threaded performance.</p>
+                            <p>The <a href="https://github.com/STEllAR-GROUP/hpx/">High Performance ParalleX (HPX)</a> is a runtime system known for its support for the asynchronous task programming model. Currently, HPX uses MPI as its major communication backend. In this project, we would like to add an LCI parcelport for HPX and compare the new HPX/LCI system with the original HPX/MPI system to investigate: (a) how efficiently the current LCI can interact with HPX. (b) where LCI can further improve to better support the communication requirement of asynchronous task frameworks.</p>
+                            <p>The first version of a full-fledged LCI parcelport implementation has been merged to the HPX master branch
+                               and will be shipped with HPX release 1.9.0. We evaluated the performance using a real-world application,
+                               Octo-Tiger : a star system simulator based on the fast multipole method on adaptive Octrees. The LCI parcelport
+                               achieved 40% performance speedup compared to the MPI parcelport on 32 nodes/4096 cores.
+                            </p>
                         </td>
                     </tr>
                     <tr>
